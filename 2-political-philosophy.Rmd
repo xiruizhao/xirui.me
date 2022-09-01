@@ -1,0 +1,133 @@
+# Political Philosophy
+_
+
+## Utilitarianism does not take seriously the distinction between persons
+2020-09-20
+
+According to utilitarianism, satisfaction of desires (utility) is the fundamental moral good and the morally right action is that which maximizes the social utility (sum of everyone's utility). Utilitarianism sounds about right. For one individual, the rational course of action is to manage his gains and losses so as to achieve the maximal utility over his lifetime. Consequently, for a group of individuals, the rational course of action must be to allocate each individual's gains and losses to achieve the maximal social utility. To understand social utility, utilitarians introduce an impartial spectator, through whom the the desires of many are translated and adjusted into the vicarious desires of one and through whom the principle of rational choice extends to the society. But it is not rational for one person to bear the cost of another person's pleasure, because he does not experience that pleasure and is not compensated for his loss. When one person manages his own life, the principle of rational choice ensures that his efforts are duly rewarded. When the impartial spectator manages the society, other people's pleasures are treated as your own and credited to your balance sheet.
+
+**Reference**
+
+Rawls, John. 1999. "5. Classical Utilitarianism", *A Theory of Justice* [Revised Edition]. Harvard University Press.
+
+## The Chamberlain argument against redistribution (WIP)
+2021-01-31
+
+Distributive justice concerns the moral principles underlying just (re)distribution of resources, wealth, income, etc. Nozick finds this term prejudicial, since there is no central agency distributing *all* the resources (assuming that you do not live in Maoist China). Nozick prefers the neutral term "justice in holdings".
+
+Nozick's theory of justice in holdings is called the "entitlement theory". Basically, some specific kinds of actions entitle you to some property. It has three subject matters: 1) justice in acquisition (how people come to appropriate unowned objects), 2) justice in transfer and 3) rectification of injustice for violations of 1) and 2). Nozick only sketches the outlines of each subject. With regard to justice in acquisition, he rejects Locke's labor-mixing theory (a person comes to appropriate an unowned object by "mixing" his labor with it) or the added value theory; however, he thinks it should contain at least a weak version of the Lockean proviso "enough and as good left over" that appropriation cannot disable another person from "[using] freely what he previously could". With regard to rectification, he referred readers to Boris Bittker's 1973 book *The Case for Black Reparations*, in which Bittker argues for, among others, compensation for school segregation.
+
+It is assumed that the entitlement theory's details can be spelled out through theoretical investigation.
+
+The entitlement theory is historical: it looks at the causal history of the current distribution (who has what) to determine whether it is just; in contrast, end-state principles look at only the structural properties of the current time-slice (or a function of current and past time-slices). For example, a classical utilitarian looks only at the total utility (perhaps over one's lifetime), a sufficientarian whether everyone's welfare meets a threshold. The entitlement theory should be contrasted with another class of principles of distributive justice: patterned principles. Patterned principles specify that a person's holdings should be proportional to a function of some "natural"[^1] dimension(s), e.g., moral merit, contribution to society, (for a socialist) adjusted labor hours, IQ, educational attainment, past victimization[^2]. The entitlement theory is not patterned because it simply does not say that holdings should vary with some natural dimension, although the actual distribution guided by the entitlement theory may *coincidentally* vary with one because independent individuals may perform actions that in aggregate produce such patterning, e.g., marginal product in a free market. The entitlement theory says that no pattern is built into the concept of justice.
+
+[^1]: These dimensions are called "natural" to exclude contrived examples because any distribution can be reduced to a function of some artificial dimensions. Cf. overfitting in statistics.
+[^2]: The difference between rectification and a patterned principle based on past victimization is that the patterned principle may require A, who harmed no one, to compensate B, who is harmed by C.
+
+The Chamberlain argument against patterned (and end-state) principles of distributive justice goes as follows. Assume that your favorite patterned principle *P* is realized; everyone has exactly what he deserves (call this distribution *D1*). Suppose that Wilt Chamberlain is a very popular basketball player and charges 25 cents per ticket. Suppose that in one season, one million people attended his game and he gained $250,000 (call the new distribution *D2*). Is *D2* unjust? If it is, it seems that every ordinary transaction may disturb a just distribution and requires redistribution. Nozick therefore says, "patterning requires continuous interference with individuals' actions and choices".
+
+The quote above lends to an impression that individual liberties should be counterbalanced with patterning concerns, that Nozick's argument boils down to an imperious insistence that liberty matters more than patterns (e.g., equality). But Mark (2018) presetns a better interpretation: the Chamberlain argument points out *internal* contradictions in patterned princples. We assumed that *D1* is just (in accordance with *P*), so how did disparate individuals' voluntary choices contaminate the distribution and introduce injustice? If *P* commands the transfer of a portion of Chamberlain's money to the attendants, that would seem odd because we assumed that the attendants voluntarily chose to pay Chamberlain; if *P* commands the transfer to third parties, that would seem equally odd because while the coins were in the attendants' pockets, third parties had no claim over them, but somehow attendants' voluntary transactions with Chamberlain, not unjustly worsening third parties' situation, give rise to a claim in the proceeds. Patterned principles owe us an explanation of why it is just to incessantly and forcefully counteract and reverse the effects of individuals' free use of their property, negating their exact intentions of the transactions.
+
+At the very least, the Chamberlain argument suggests that redistribution for its own sake is morally impermissible. Valid "redistribution" must take the form of compensation for actual injuries (i.e., rectification).
+
+**References**
+
+Nozick, Robert. 1974. Section I The Entitlement Theory, Chapter 7 Distributive Justice. In *Anarchy, State, and Utopia*. Basic Books.
+
+Mack, Eric. 2018. “Robert Nozick’s Political Philosophy.” In *The Stanford Encyclopedia of Philosophy*, edited by Edward N. Zalta, Summer 2018. https://plato.stanford.edu/archives/sum2018/entries/nozick-political/ Metaphysics Research Lab, Stanford University.
+
+## What is the point of equality?
+Work in Progress
+<!--
+title: Elizabeth S. Anderson. 1999. "What is the point of equality?" *Ethics*
+date: 2019-12-04
+draft: true
+categories: [Political Philosophy]
+tags: [Elizabeth S. Anderson, Equality]
+
+# Luck egalitarians invite devastating conservative criticisms
+
+* Ronald Dworkin: equality is an "envy-free" distribution of resources
+  * Dworkin proposes a hypothetical auction in which everyone can accumulate bundles of resources through equal means of payment, so that in the end no one is jealous of another's bundle (the envy test).
+* Philippe Van Parijs: the state must support lazy, able-bodied surfers who are unwilling to work because of equality among and liberal neutrality of conceptions of the good
+  * So equality must support parasitic lifestyles?
+* Richard Arneson: the state must subside expensive religious ceremonies its citizens feel bound to perform
+* G. A. Cohen: we must compensate temperamentally gloomy individuals and subsidize individuals incurably bored by inexpensive hobbies to pursue expensive diversions
+
+> The above proposals bolster the objection that egalitarians are oblivious to the proper limits of state power and permit coercion of others for merely private ends.
+
+* Van Parijs: the equal right to get married requires that if gender imbalance is severe, individuals must bid for partners and the losers get compensated
+  * > This supports the objection that egalitarianism, in its determination to correct perceived unfairness everywhere, invades our privacy and burdens the personal ties of love and affection that lie at the core of family life.
+
+# Outline
+
+> In this article, I will compare the implications of these two concep- tions of the point of equality. The first conception, which takes the fun- damental injustice to be the natural inequality in the distribution of luck, can be called "luck egalitarianism" or "equality of fortune." I shall argue that equality of fortune fails the most fundamental test any egalitarian theory must meet: that its principles express equal respect and concern for all citizens. It fails this test in three ways. First, it excludes some citizens from enjoying the social conditions of freedom on the spurious ground that it's their fault for losing them. It escapes this problem only at the cost of paternalism. Second, equality of fortune makes the basis for citizens' claims on one another the fact that some are inferior to others in the worth of their lives, talents, and personal qualities. Thus, its principles express contemptuous pity for those the state stamps as sadly inferior and uphold envy as a basis for distributing goods from the lucky to the unfor- tunate. Such principles stigmatize the unfortunate and disrespect the for- tunate by failing to show how envy can obligate them. Third, equality of fortune, in attempting to ensure that people take responsibility for their choices, makes demeaning and intrusivejudgments of people's capacities to exercise responsibility and effectively dictates to them the appropriate uses of their freedom. (p.289)
+
+# democratic equality
+
+> In seeking the construction of a community of equals, democratic equality integrates principles of distribution with the expressive demands of equal respect. Democratic equality guarantees all law-abiding citizens effective access to the **social conditions** of their freedom at all times. It justifies the distributions required to secure this guarantee by appealing to the obligations of citizens in a democratic state. (p.289)
+
+> Consider, then, three aspects of individual functioning: as a human being, as a participant in a system of cooperative production, and as a citizen of a democratic state. To be capable of functioning as a human being requires effective access to the means of sustaining one's biological existence-food, shelter, clothing, medical care-and access to the basic conditions of human agency- knowledge of one's circumstances and options, the ability to deliberate about means and ends, the psychological conditions of autonomy, including the self-confidence to think and judge for oneself, freedom of thought and movement. To be capable of functioning as an equal participant in a system of cooperative production requires effective access to the means of production, access to the education needed to develop one's talents, freedom of occupational choice, the right to make contracts and enter into cooperative agreements with others, the right to receive fair value for one's labor, and recognition by others of one's productive contributions. To be capable of functioning as a citizen requires rights to political participation, such as freedom of speech and the franchise, and also effective access to the goods and relationships of civil society. This entails freedom of association, access to public spaces such as roads, parks, and public accommodations including public trans- portation, the postal service, and telecommunications. This also entails the social conditions of being accepted by others, such as the ability to appear in public without shame, and not being ascribed outcast status. The freedom to form relationships in civil society also requires effective access to private spaces, since many such relationships can only function when protected from the scrutiny and intrusions of others. Homelessness - that is, having only public dwelling-is a condition of profound unfreedom. (p.317-318)
+
+Anderson has a specific, substantive conception of a citizen.
+
+# case studies
+
+* dependent caretakers
+* deaf community
+    * interpersonal comparison of welfare: deaf people's experience is unintelligible to non-deaf people, but non-deaf people' experience is unintelligible to them too. So how to rank experiences? 
+    * Usually, non-deaf people would prefer not to become deaf. But is it due to the undesirableness of deafness in itself, or his previous incongruent experience, or the popularity of non-deafness?
+* the disabled, the ugly, and other victims of bad luck
+> According to democratic equality, the distribution of nature's good or bad fortune is neither just nor unjust. [...] Although the distribution of natural assets is not a matter ofjustice, what people do in response to this distri- bution is. People may not make the possession of a disability, repugnant appearance, or low intelligence the occasion for excluding people from civil society, dominating them, beating them up, or otherwise oppressing them. (p.331)
+> Richard Arneson objects to this distinction between disabled people and people with involuntarily expensive tastes.
+
+# option luck, brute luck, risk preferences and veil of ignorance
+
+
+# Restricted luck egalitarianism
+* The state is not responsible for redistribution.
+* Special insurance companies are responsible for mitigating risks.
+* Inequality arising from brute luck can be redistribution.
+    * Inequality in constitutive elements (race, gender, intelligence) does not
+* Inequality arising from option luck.
+
+# thought experiment
+one tall individual and one short individual
+Even if height is not the result of the individual's intentional actions, the goods resuting from one's use of her talents is the result of one's intentional actions.
+The fact that one has inherent advantage does not diminish the efforts one put into to produce the goods.
+
+The tall individual foraged 10 fruits while the short foraged 4 fruits (both larger than suatainence). Does justice require the transfer of 3 fruit from
+
+Only goods resulting from one's unintentional uses of one's inherent advantages are distributable, e.g., aliens .
+
+# 
+
+> But egalitarians also aim at abolishing private relations of domination, and therefore support the functionings needed for individual sexual autonomy. (p.317)
+
+> Being a poor card player does not make one oppressed. More precisely, the social order can and should be arranged so that one's skill at cards does not determine one's status in civil society. Nor is being a good card player necessary for functioning as a citizen. (p.317) 
+
+# feminist philosophy
+
+// Oppression
+
+Anderson:
+> that is, forms of social relationship by which some people dominate, exploit, marginalize, demean, and inflict violence upon others. (p.313)
+
+Cudd (summarized by Allen):
+> Cudd defines oppression in terms of four conditions: 1) the group condition, which states that individuals are subjected to unjust treatment because of their membership (or ascribed membership) in certain social groups (Cudd 2006, 21); 2) the harm condition, which stipulates that individuals are systematically and unfairly harmed as a result of such membership (Cudd 2006, 21); 3) the coercion condition, which specifies that the harms that those individuals suffer are brought about through unjustified coercion (Cudd 2006, 22); and 4) the privilege condition, which states that such coercive, group-based harms count as oppression only when there exist other social groups who derive a reciprocal privilege or benefit from that unjust harm (Cudd 2006, 22–23). Cudd then defines oppression as “an objective social phenomenon” characterized by these four conditions (Cudd 2006, 23).
+
+Allen, Amy, "Feminist Perspectives on Power", *The Stanford Encyclopedia of Philosophy* (Fall 2016 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2016/entries/feminist-power/>.
+
+// Domination
+
+// Marginalization
+-->
+
+**Reference**
+
+Anderson, Elizabeth S. 1999. "What is the point of equality?" *Ethics*
+
+<!--
+Rights as Moral constraints.
+"A more appropriate view of individual rights is as follows. Individual rights are co-possible; each person may exercise his rights as he chooses. The exercise of these rights fixes some features of the world. Within the constraints of these fixed features, a choice may be made by a social choice mechanism based upon a social ordering; if there are any choices left to make! Rights do not determine a social ordering but instead set the constraints within which a social choice is to be made, by excluding certain alternatives, fixing others, and so on. [...] Rights do not determine the position of an alternative or the relative position of two alternatives in a social ordering; they operate upon a social ordering to constrain the choice it can yield."
+-->

@@ -1,0 +1,16 @@
+--- 
+title: "Xirui Zhao's blog"
+author: "Xirui Zhao"
+date: "2021-12-30"
+site: "bookdown::bookdown_site"
+output: "bookdown::gitbook"
+---
+
+# About {-}
+My personal blog, published with [bookdown](https://bookdown.org).
+
+There is no definite plan or organization yet.
+
+[Github](https://github.com/xiruizhao)
+
+[Linkedin](https://linkedin.com/xiruizhao)
