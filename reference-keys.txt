@@ -1,12 +1,8 @@
-philosophy
+study-guides
 political-philosophy
-the-chamberlain-argument-against-redistribution-wip
-utilitarianism-does-not-take-seriously-the-distinction-between-persons
-what-is-the-point-of-equality
-oppression
-domination
-marginalization
-tools
+notes
+c-notes
+tcp-socket-programming-notes
 git-notes
 work-in-progress
 inspect-wip
@@ -24,5 +20,8 @@ prerequisitives
 steps
 testing
 other-clients-compatible-with-zotero-library
-study-guides
-computer-science
+retirement-math
+a-lump-sum-for-fixed-retirement-expense
+interest-rate-and-saving
+fixed-contribution-for-a-lump-sum
+saving-ratio-assuming-fixed-expense-throughout-working-and-retirement

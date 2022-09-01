@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Xirui Zhao’s blog</title>
-  <meta name="description" content="Xirui Zhao’s blog" />
+  <title>4 Retirement Math | Xirui Zhao’s blog</title>
+  <meta name="description" content="4 Retirement Math | Xirui Zhao’s blog" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Xirui Zhao’s blog" />
+  <meta property="og:title" content="4 Retirement Math | Xirui Zhao’s blog" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Xirui Zhao’s blog" />
+  <meta name="twitter:title" content="4 Retirement Math | Xirui Zhao’s blog" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="notes.html"/>
 
-<link rel="next" href="study-guides.html"/>
 <script src="libs/jquery-3.6.1/jquery-3.6.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -183,26 +183,77 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Xirui Zhao’s blog</h1>
-<p class="author"><em>Xirui Zhao</em></p>
-<p class="date"><em>2021-12-30</em></p>
+<div id="retirement-math" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Retirement Math<a href="retirement-math.html#retirement-math" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="a-lump-sum-for-fixed-retirement-expense" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> A lump sum for fixed retirement expense<a href="retirement-math.html#a-lump-sum-for-fixed-retirement-expense" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Suppose you plan to deposit a lump sum to an interest-bearing account for retirement
+expenses, how much do you need to save?</p>
+<p>Let the real interest rate (monthly) be <span class="math inline">\(r\)</span> (inflation-adjusted) and assume the interest
+payments are made monthly and are tax-free. Let your life expectancy minus
+retirement age be <span class="math inline">\(live\)</span> months. Let your inflation-adjusted monthly expense be
+<span class="math inline">\(expense\)</span>. Let your monthly balance be <span class="math inline">\(balance(n)\)</span> where <span class="math inline">\(balance(0)\)</span> is the beginning balance
+(i.e., what we are trying to figure out) and <span class="math inline">\(balance(live)\)</span> at your death should
+be 0 (assume you leave nothing for your children).</p>
+<p>We have</p>
+<p><span class="math display">\[balance(n) = (1+r)balance(n-1) - expense\]</span></p>
+<p>It’s a <a href="https://people.math.umass.edu/~lrq/ps_files/teaching/math456/Chapter3.pdf">first order inhomogeneous linear difference equation</a>
+and its solution is given by</p>
+<p><span class="math display">\[balance(n)=\frac{expense}{r}\left[1-(1+r)^{n-live}\right]\]</span></p>
+<p>(an exponential decay function of <span class="math inline">\(n\)</span>).</p>
+<p>Suppose <span class="math inline">\(r = \frac{0.03}{12} = 0.0025\)</span> (<span class="math inline">\(1.0025^{12}=1.030416\)</span>, so slightly larger than
+a 3% annual percentage yield), <span class="math inline">\(live = (85 - 67)\times12 = 216\)</span> (US life expectancy in 2021
+was 76, full retirement age for Social Security is 67 for people born after 1960),
+<span class="math inline">\(expense = 4345\)</span> (<a href="https://www.retireguide.com/retirement-planning/average-spending/" class="uri">https://www.retireguide.com/retirement-planning/average-spending/</a>),
+then <span class="math inline">\(balance(0)=\frac{4345}{0.0025}(1-(1.0025)^{-216})=724,500\)</span>. The interest payments
+saved you <span class="math inline">\(216\times4345-724500=214020\)</span>, i.e. 22.8% over 19 years.</p>
+<div id="interest-rate-and-saving" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Interest rate and saving<a href="retirement-math.html#interest-rate-and-saving" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s consider how changes in the interest rate affect the amount of the lump sum saving</p>
+<p><span class="math display">\[balance(0)=\frac{expense}{r}\left[1-(1+r)^{-live}\right]\]</span></p>
+<p>As <span class="math inline">\(r\)</span> increases, <span class="math inline">\(\frac{expense}{r}\)</span> decreases, <span class="math inline">\((1+r)^{-live}\)</span> decreases
+(because <span class="math inline">\(-live &lt; 0\)</span>), <span class="math inline">\(\left[1-(1+r)^{-live}\right]\)</span> increases, so the effect of
+increase in <span class="math inline">\(r\)</span> appears ambiguous when common sense tells us you can save less.
+To mathematically resolve this question, we turn to the partial derivative:</p>
+<p><span class="math display">\[\frac{\partial balance(0)}{\partial r}=\frac{expense}{r^2}\left[(live\cdot r+r+1)(1+r)^{-live-1}-1\right]\]</span></p>
+<p>If <span class="math inline">\(\frac{\partial balance(0)}{\partial r} &lt; 0\)</span> holds for any reasonable <span class="math inline">\(r, expense,\text{ and } live\)</span>,
+then an increase in <span class="math inline">\(r\)</span> results in a decrease in <span class="math inline">\(balance(0)\)</span>, meaning we need to save less.
+Because <span class="math inline">\(\frac{expense}{r^2}&gt;0\)</span>, we only need to consider the sign of <span class="math inline">\(\left[(live\cdot r+r+1)(1+r)^{-live-1}-1\right]\)</span>.</p>
+<p>Since</p>
+<p><span class="math display">\[\left[(live\cdot r+r+1)(1+r)^{-live-1}-1\right]\biggr|_{r=0}=0\]</span></p>
+<p>and</p>
+<p><span class="math display">\[\frac{\partial\left[(live\cdot r+r+1)(1+r)^{-live-1}-1\right]}{\partial r}=-live(live+1)r(1+r)^{-live-2}&lt;0\text{ for }r, live&gt;0\]</span></p>
+<p>we have</p>
+<p><span class="math display">\[\left[(live\cdot r+r+1)(1+r)^{-live-1}-1\right]&lt;0 \text{ for } r&gt;0\]</span></p>
+<p>which leads us to conclude that <span class="math inline">\(\frac{\partial balance(0)}{\partial r}&lt;0 \text{ for } r&gt;0\)</span>. Therefore, a higher interest rate decreases <span class="math inline">\(balance(0)\)</span>, i.e., requiring us to save less for retirement.</p>
 </div>
-<div id="about" class="section level1 unnumbered hasAnchor">
-<h1>About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>My personal blog, published with <a href="https://bookdown.org">bookdown</a>.</p>
-<p>There is no definite plan or organization yet.</p>
-<p><a href="https://github.com/xiruizhao">Github</a></p>
-<p><a href="https://linkedin.com/xiruizhao">Linkedin</a></p>
+</div>
+<div id="fixed-contribution-for-a-lump-sum" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Fixed contribution for a lump sum<a href="retirement-math.html#fixed-contribution-for-a-lump-sum" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>How much should you save every month to an interest-bearing account for the lump sum above?</p>
+<p>Let your monthly contribution be <span class="math inline">\(contrib\)</span>, the real interest rate (monthly)
+<span class="math inline">\(r\)</span>, and the contribution period be <span class="math inline">\(work\)</span> months. We could solve a difference equation
+as above or take advantage of a known summation formula <span class="math inline">\(\sum_{i=0}^nx^i=\frac{x^{n+1}-1}{x-1}\)</span>.
+Your accumulated contributions with compounded interests at the end is given by</p>
+<p><span class="math display">\[balance=\sum_{i=1}^{work}contrib(1+r)^{work-i}=contrib\sum_{i=0}^{work-1}(1+r)^{i}=\frac{contrib}{r}\left[(1+r)^{work}-1\right]\]</span></p>
+<p>Suppose <span class="math inline">\(r=0.0025, work=(67-25)\times12=504\)</span> and desired <span class="math inline">\(balance=724,500\)</span>, then <span class="math inline">\(contrib=\frac{r}{(1+r)^{work}-1}balance=719\)</span>. The interests saved you <span class="math inline">\(\frac{724500-719\times504}{724500}=\)</span> 50%.</p>
+</div>
+<div id="saving-ratio-assuming-fixed-expense-throughout-working-and-retirement" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Saving ratio assuming fixed expense throughout working and retirement<a href="retirement-math.html#saving-ratio-assuming-fixed-expense-throughout-working-and-retirement" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Combining the previous two sections:</p>
+<p><span class="math display">\[\frac{contrib}{r}\left[(1+r)^{work}-1\right]=\frac{expense}{r}\left[1-(1+r)^{-live}\right]\]</span></p>
+<p><span class="math display">\[\implies\frac{contrib}{contrib+expense}=\frac{(1+r)^{live}-1}{(1+r)^{work+live}-1}\]</span></p>
+<p>At <span class="math inline">\(work=504, live=216, r=0.0025\)</span>, we have <span class="math inline">\(\frac{contrib}{contrib + expense}=0.142\)</span> i.e. a 14.2% saving ratio during working. A higher interest rate requires less saving. Without interests, you need to save <span class="math inline">\(\frac{216}{504+216}=\)</span> 17.7%.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="notes.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="study-guides.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
