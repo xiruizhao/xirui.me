@@ -1,0 +1,85 @@
+# Retirement Math
+
+## A lump sum for fixed retirement expense
+
+Suppose you plan to deposit a lump sum  to an interest-bearing account for retirement
+expenses, how much do you need to save?
+
+Let the real interest rate (monthly) be $r$ (inflation-adjusted) and assume the interest
+payments are made monthly and are tax-free. Let your life expectancy minus
+retirement age be $live$ months. Let your inflation-adjusted monthly expense be
+$expense$. Let your monthly balance be $balance(n)$ where $balance(0)$ is the beginning balance
+(i.e., what we are trying to figure out) and $balance(live)$ at your death should
+be 0 (assume you leave nothing for your children).
+
+We have 
+
+$$balance(n) = (1+r)balance(n-1) - expense$$
+
+It's a [first order inhomogeneous linear difference equation](https://people.math.umass.edu/~lrq/ps_files/teaching/math456/Chapter3.pdf)
+and its solution is given by
+
+$$balance(n)=\frac{expense}{r}\left[1-(1+r)^{n-live}\right]$$
+
+(an exponential decay function of $n$).
+
+Suppose $r = \frac{0.03}{12} = 0.0025$ ($1.0025^{12}=1.030416$, so slightly larger than
+a 3% annual percentage yield), $live = (85 - 67)\times12 = 216$ (US life expectancy in 2021
+was 76, full retirement age for Social Security is 67 for people born after 1960),
+$expense = 4345$ (https://www.retireguide.com/retirement-planning/average-spending/),
+then $balance(0)=\frac{4345}{0.0025}(1-(1.0025)^{-216})=724,500$. The interest payments
+saved you $216\times4345-724500=214020$, i.e. 22.8% over 19 years.
+
+### Interest rate and saving
+
+Let's consider how changes in the interest rate affect the amount of the lump sum saving
+
+$$balance(0)=\frac{expense}{r}\left[1-(1+r)^{-live}\right]$$
+
+As $r$ increases, $\frac{expense}{r}$ decreases, $(1+r)^{-live}$ decreases
+(because $-live < 0$), $\left[1-(1+r)^{-live}\right]$ increases, so the effect of
+increase in $r$ appears ambiguous when common sense tells us you can save less. 
+To mathematically resolve this question, we turn to the partial derivative:
+
+$$\frac{\partial balance(0)}{\partial r}=\frac{expense}{r^2}\left[(live\cdot r+r+1)(1+r)^{-live-1}-1\right]$$
+
+If $\frac{\partial balance(0)}{\partial r} < 0$ holds for any reasonable $r, expense,\text{ and } live$,
+then an increase in $r$ results in a decrease in $balance(0)$, meaning we need to save less.
+Because $\frac{expense}{r^2}>0$, we only need to consider the sign of $\left[(live\cdot r+r+1)(1+r)^{-live-1}-1\right]$.
+
+Since
+
+$$\left[(live\cdot r+r+1)(1+r)^{-live-1}-1\right]\biggr|_{r=0}=0$$
+
+and 
+
+$$\frac{\partial\left[(live\cdot r+r+1)(1+r)^{-live-1}-1\right]}{\partial r}=-live(live+1)r(1+r)^{-live-2}<0\text{ for }r, live>0$$
+
+we have 
+
+$$\left[(live\cdot r+r+1)(1+r)^{-live-1}-1\right]<0 \text{ for } r>0$$
+
+which leads us to conclude that $\frac{\partial balance(0)}{\partial r}<0 \text{ for } r>0$. Therefore, a higher interest rate decreases $balance(0)$, i.e., requiring us to save less for retirement.
+
+## Fixed contribution for a lump sum
+
+How much should you save every month to an interest-bearing account for the lump sum above?
+
+Let your monthly contribution be $contrib$, the real interest rate (monthly)
+$r$, and the contribution period be $work$ months. We could solve a difference equation
+as above or take advantage of a known summation formula $\sum_{i=0}^nx^i=\frac{x^{n+1}-1}{x-1}$.
+Your accumulated contributions with compounded interests at the end is given by
+
+$$balance=\sum_{i=1}^{work}contrib(1+r)^{work-i}=contrib\sum_{i=0}^{work-1}(1+r)^{i}=\frac{contrib}{r}\left[(1+r)^{work}-1\right]$$
+
+Suppose $r=0.0025, work=(67-25)\times12=504$ and desired $balance=724,500$, then $contrib=\frac{r}{(1+r)^{work}-1}balance=719$. The interests saved you $\frac{724500-719\times504}{724500}=$ 50%.
+
+## Saving ratio assuming fixed expense throughout working and retirement
+
+Combining the previous two sections:
+
+$$\frac{contrib}{r}\left[(1+r)^{work}-1\right]=\frac{expense}{r}\left[1-(1+r)^{-live}\right]$$
+
+$$\implies\frac{contrib}{contrib+expense}=\frac{(1+r)^{live}-1}{(1+r)^{work+live}-1}$$
+
+At $work=504, live=216, r=0.0025$, we have $\frac{contrib}{contrib + expense}=0.142$ i.e. a 14.2% saving ratio during working. A higher interest rate requires less saving. Without interests, you need to save $\frac{216}{504+216}=$ 17.7%.

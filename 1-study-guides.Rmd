@@ -1,5 +1,20 @@
 # Study Guides
-_
+Mostly textbooks I read.
 
-## Computer Science
-[Harvard's CS50 Introduction to Computer Science](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x)
+1. Computer Science
+    1. [Harvard's CS50 Introduction to Computer Science](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x). If you enjoyed it, you can consider a CS career and study it in college
+    2. C: Kochan, S. (2014). *Programming in C* (4th ed.). Addison-Wesley Professional.
+    3. C++: Stroustrup, B. (2022). *A Tour of C++* (3rd ed.). Addison-Wesley Professional.
+    4. Computer Architecture: Harris, S. & Harris, D. (2015). *Digital Design and Computer Architecture: ARM Edition*. Morgan Kaufmann.
+    5. Computer System Organization: Bryant, R. & O'Hallaron, D. (2015). *Computer Systems: A Programmer's Perspective* (3rd ed.). Pearson.
+    6. Computer Networks: Kurose, J. & Ross, K. (2021). *Computer Networking: A Top-Down Approach* (8th ed.). Pearson.
+    7. Data Structures: Goodrich et al. (2013). *Data Structures and Algorithms in Python*. Wiley.
+    8. Algorithms: Cormen et al. (2009). *Introduction to Algorithms* (3rd ed.). MIT Press.
+    9. Operating Systems: Tanenbaum, A. & Bos, H. (2015). *Modern Operating Systems* (4th ed.). Pearson.
+    10. Git: Chacon, S. & Straub, B. (2019). *Pro Git* (2nd ed.). Apress. https://git-scm.com/book/en/v2
+2. Math
+    1. Calculus: Spivak, M. (2006). *Calculus* (3rd ed.). Cambridge University Press.
+    2. Linear Algebra: Lay et al. (2014). *Linear Algebra and Its applications* (5th ed.). Pearson.
+    3. Probability & Statistics: DeGroot, M.H. & Schervish, M.J. (2011). *Probability and Statistics* (4th ed.). Pearson.
+3. Economics: Mankiw, N.G. (2017). *Principles of Economics* (8th ed.). Cengage Learning.
+4. Philosophy: https://plato.stanford.edu

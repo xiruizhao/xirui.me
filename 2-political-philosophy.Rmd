@@ -1,16 +1,20 @@
 # Political Philosophy
-_
 
+under construction
+
+<!--
 ## Utilitarianism does not take seriously the distinction between persons
+
 2020-09-20
 
 According to utilitarianism, satisfaction of desires (utility) is the fundamental moral good and the morally right action is that which maximizes the social utility (sum of everyone's utility). Utilitarianism sounds about right. For one individual, the rational course of action is to manage his gains and losses so as to achieve the maximal utility over his lifetime. Consequently, for a group of individuals, the rational course of action must be to allocate each individual's gains and losses to achieve the maximal social utility. To understand social utility, utilitarians introduce an impartial spectator, through whom the the desires of many are translated and adjusted into the vicarious desires of one and through whom the principle of rational choice extends to the society. But it is not rational for one person to bear the cost of another person's pleasure, because he does not experience that pleasure and is not compensated for his loss. When one person manages his own life, the principle of rational choice ensures that his efforts are duly rewarded. When the impartial spectator manages the society, other people's pleasures are treated as your own and credited to your balance sheet.
 
 **Reference**
 
-Rawls, John. 1999. "5. Classical Utilitarianism", *A Theory of Justice* [Revised Edition]. Harvard University Press.
+Rawls, John. 1999. "5. Classical Utilitarianism", *A Theory of Justice* \[Revised Edition\]. Harvard University Press.
 
 ## The Chamberlain argument against redistribution (WIP)
+
 2021-01-31
 
 Distributive justice concerns the moral principles underlying just (re)distribution of resources, wealth, income, etc. Nozick finds this term prejudicial, since there is no central agency distributing *all* the resources (assuming that you do not live in Maoist China). Nozick prefers the neutral term "justice in holdings".
@@ -22,6 +26,7 @@ It is assumed that the entitlement theory's details can be spelled out through t
 The entitlement theory is historical: it looks at the causal history of the current distribution (who has what) to determine whether it is just; in contrast, end-state principles look at only the structural properties of the current time-slice (or a function of current and past time-slices). For example, a classical utilitarian looks only at the total utility (perhaps over one's lifetime), a sufficientarian whether everyone's welfare meets a threshold. The entitlement theory should be contrasted with another class of principles of distributive justice: patterned principles. Patterned principles specify that a person's holdings should be proportional to a function of some "natural"[^1] dimension(s), e.g., moral merit, contribution to society, (for a socialist) adjusted labor hours, IQ, educational attainment, past victimization[^2]. The entitlement theory is not patterned because it simply does not say that holdings should vary with some natural dimension, although the actual distribution guided by the entitlement theory may *coincidentally* vary with one because independent individuals may perform actions that in aggregate produce such patterning, e.g., marginal product in a free market. The entitlement theory says that no pattern is built into the concept of justice.
 
 [^1]: These dimensions are called "natural" to exclude contrived examples because any distribution can be reduced to a function of some artificial dimensions. Cf. overfitting in statistics.
+
 [^2]: The difference between rectification and a patterned principle based on past victimization is that the patterned principle may require A, who harmed no one, to compensate B, who is harmed by C.
 
 The Chamberlain argument against patterned (and end-state) principles of distributive justice goes as follows. Assume that your favorite patterned principle *P* is realized; everyone has exactly what he deserves (call this distribution *D1*). Suppose that Wilt Chamberlain is a very popular basketball player and charges 25 cents per ticket. Suppose that in one season, one million people attended his game and he gained $250,000 (call the new distribution *D2*). Is *D2* unjust? If it is, it seems that every ordinary transaction may disturb a just distribution and requires redistribution. Nozick therefore says, "patterning requires continuous interference with individuals' actions and choices".
@@ -37,8 +42,9 @@ Nozick, Robert. 1974. Section I The Entitlement Theory, Chapter 7 Distributive J
 Mack, Eric. 2018. “Robert Nozick’s Political Philosophy.” In *The Stanford Encyclopedia of Philosophy*, edited by Edward N. Zalta, Summer 2018. https://plato.stanford.edu/archives/sum2018/entries/nozick-political/ Metaphysics Research Lab, Stanford University.
 
 ## What is the point of equality?
+
 Work in Progress
-<!--
+
 title: Elizabeth S. Anderson. 1999. "What is the point of equality?" *Ethics*
 date: 2019-12-04
 draft: true
@@ -121,13 +127,13 @@ Allen, Amy, "Feminist Perspectives on Power", *The Stanford Encyclopedia of Phil
 // Domination
 
 // Marginalization
--->
+
 
 **Reference**
 
 Anderson, Elizabeth S. 1999. "What is the point of equality?" *Ethics*
 
-<!--
+
 Rights as Moral constraints.
 "A more appropriate view of individual rights is as follows. Individual rights are co-possible; each person may exercise his rights as he chooses. The exercise of these rights fixes some features of the world. Within the constraints of these fixed features, a choice may be made by a social choice mechanism based upon a social ordering; if there are any choices left to make! Rights do not determine a social ordering but instead set the constraints within which a social choice is to be made, by excluding certain alternatives, fixing others, and so on. [...] Rights do not determine the position of an alternative or the relative position of two alternatives in a social ordering; they operate upon a social ordering to constrain the choice it can yield."
 -->

@@ -1,17 +1,18 @@
 # Notes
-_
 
 ## C notes
-char \*: pointer to char
-char \* const: const pointer to char
-const char \*, char const \*: pointer to const char
-const char \* const: const pointer to const char
+
+- `char *`: pointer to char
+- `char * const`: const pointer to char
+- `const char *, char const *`: pointer to const char
+- `const char * const`: const pointer to const char
 
 ## TCP socket programming notes
 
 epoll event:
 
 EPOLLHUP: the other end of a pipe called `close(2)`; both direction of a TCP connection are closed (sent and received FIN?)
+
 EPOLLRDHUP: stream peer closed their writing connection (peer sent FIN)
 
 `send(2)` returns 0: stream peer closed their writing connection (peer sent FIN)
@@ -19,7 +20,9 @@ EPOLLRDHUP: stream peer closed their writing connection (peer sent FIN)
 errno:
 
 ECONNABORTED: TCP enters TCP_CLOSE due to RST, timeout or ICMP error during connect
+
 ECONNRESET: received RST while not in TCP_SYN_SENT (ECONNREFUSED) or TCP_CLOSE_WAIT (EPIPE)
+
 also EPIPE: send on a shutdown writing half
 
 ## Git Notes
@@ -29,6 +32,7 @@ Git version 2.28.0
 ### Work In Progress
 
 #### Inspect WIP
+
 1. `git status` shows the list of files with staged and unstaged changes and untracked files.
 2. `git diff` shows unstaged changes (worktree v index)
 3. `git diff --staged` show staged changes (index v HEAD)
@@ -36,6 +40,7 @@ Git version 2.28.0
 5. `<pathspec>` add be added at the end, e.g., `:/` stands for repository root.
 
 #### Discard WIP
+
 1. `git clean -f <path>` removes untracked files
 2. `git restore <pathspec>` discards unstaged changes (working => index)
   - alternatively, `git checkout <pathspec>`
@@ -47,6 +52,7 @@ Git version 2.28.0
 Note: `git reset` "resets current HEAD to the specified state" (and changes the worktree and the index accordingly) while `git restore` does not move HEAD.
 
 #### Save and reapply WIP
+
 1. `git stash` stashes unstaged and staged changes (untracked files are excluded) to a stash stack
   - `git stash -u` includes untracked files (excluding ignored files); `git statsh -a` includes even ignored files
   - `git stash -p` is interactive
@@ -59,7 +65,7 @@ Note: `git reset` "resets current HEAD to the specified state" (and changes the 
   - `git stash apply n` applies the n-th stash from the stash stack
   - `git stash clear` clears the stash stack
 
-#### (Somewhat odd) alternative to `git stash`
+#### (Somewhat odd) alternative to git stash
 
 ```bash
 git worktree add -b hotfix ../hotfix
@@ -75,6 +81,7 @@ git worktree remove ../hotfix
 ### History
 
 #### Inspect history
+
 1. `git log --stat`
 2. `git log -p`
 3. `git log <file>`
@@ -82,44 +89,51 @@ git worktree remove ../hotfix
 #### Rewrite history
 
 ##### Rewrite, undo and revert last commit
+
 1. `git commit --amend` replaces your last commit with a new commit.
   - supply `-m` to change commit message or `--no-edit` to keep it unchanged
 2. `git reset --hard @~` rolls HEAD back to the second last commit and restores the worktree and the index.
 3. `git revert @` makes a new commit to revert the changes introduced in last commit.
 
 ##### Squash, split, and rewrite past commits
+
 1. `git rebase --root -i`. See [Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#_changing_multiple) of *Pro Git*.
   - Squash all commits: `git reset $(git commit-tree @^{tree} -m "Squash all commits")` creates a new commit out of the tree object corresponding to HEAD and resets HEAD to it (source: [StackOverflow](https://stackoverflow.com/questions/1657017/how-to-squash-all-git-commits-into-one)). Note that some unreachable past commits are still available in your local reflog and unreachable objects are available in your local object database, which will expire by default. Reflogs and unreachable objects are **not** transfered by `git push`.
 
 ### Working with long histories
+
 1. `git clone --depth 1 <repos>`
 2. `git fetch origin <remote_branch>:<local_branch>`
 3. `git clone --depth 1 --no-single-branch <repos>` (equivalent to 1. and `git fetch --depth 1 origin 'refs/heads/*:refs/remotes/origin/*'
 `)
 3. `git fetch --deepen 1`
 
-\newpage
-
 ## WebDav Server for Zotero Library
+
 2021-01-21
 
 1. Motivation: Zotero Library's free space is only 300MB.
 2. Caveat: Group Library is not supported.
 
 ### Prerequisitives
-1. VPS
+
+1. server with publicly accessible IP
 2. domain name
 
 ### Steps
+
 1. Install vanilla caddy per https://caddyserver.com/docs/install#debian-ubuntu-raspbian, which contains systemd service files
 2. Install caddy compiled with webdav module. You can customize included modules at https://caddyserver.com/download. Unfortunately, this step has to be repeated whenever caddy is upgraded.
+
 ```bash
-curl -o /tmp/caddy 'https://caddyserver.com/api/download?os=linux&arch=amd64&p=github.com%2Fmholt%2Fcaddy-webdav&idempotency=92814018723469'
+curl -o /tmp/caddy 'https://caddyserver.com/api/download?os=linux&arch=amd64&p=github.com%2Fmholt%2Fcaddy-webdav'
 sudo install -o root -m 755 /tmp/caddy /usr/bin/caddy
 ```
+
 3. Generate password for HTTP Basic Authentication `caddy hash-password > passwd_hash # input your passwd on stdin`
 4. `sudo mkdir -p /var/www/zotero`
 5. Put in `/etc/caddy/Caddyfile`:
+
 ```
 example.com {
     basicauth {
@@ -130,10 +144,13 @@ example.com {
     webdav /zotero/*
 }
 ```
+
 6. Reload caddy config `sudo systemctl reload caddy`
 
 ### Testing
+
 [cadaver](https://directory.fsf.org/wiki/Cadaver) is a command-line WebDav client, suitable for testing: `cadaver https://example.com/zotero/`
 
 ### Other clients compatible with Zotero Library
+
 [Papership](https://www.papershipapp.com) has macOS and iOS apps that can sync with Zotero and personal WebDav servers. You should run `sudo touch /var/www/zotero/lastsync.txt` on the WebDav server on first use.
